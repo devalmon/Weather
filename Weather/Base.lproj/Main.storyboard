@@ -1,26 +1,105 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milky-Way" translatesAutoresizingMaskIntoConstraints="NO" id="JbX-wo-vau">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="powered by DarkSky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVc-FP-TB2">
+                                <rect key="frame" x="172" y="549" width="133" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88k-w3-zhB">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-6X-MjT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search a city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGp-RI-ofy">
+                                <rect key="frame" x="79.5" y="94" width="162" height="38.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOt-tG-ecl">
+                                <rect key="frame" x="114" y="140.5" width="92" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XP-jj-t0Y">
+                                <rect key="frame" x="129.5" y="176" width="61" height="68.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GMU-Hj-j3v">
+                                <rect key="frame" x="199" y="178" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="lxY-wq-BJl"/>
+                                    <constraint firstAttribute="width" constant="65" id="xII-9F-8cc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4XP-jj-t0Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8zB-0d-f3I"/>
+                            <constraint firstItem="JbX-wo-vau" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DYf-I2-Ztk"/>
+                            <constraint firstAttribute="trailing" secondItem="88k-w3-zhB" secondAttribute="trailing" id="EZt-49-1Wl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JbX-wo-vau" secondAttribute="bottom" id="FXO-TS-5ha"/>
+                            <constraint firstAttribute="trailing" secondItem="JbX-wo-vau" secondAttribute="trailing" id="JB4-yY-t0g"/>
+                            <constraint firstItem="FGp-RI-ofy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MfN-Ni-NDa"/>
+                            <constraint firstItem="GMU-Hj-j3v" firstAttribute="leading" secondItem="4XP-jj-t0Y" secondAttribute="trailing" constant="8" id="YzQ-ZW-OWS"/>
+                            <constraint firstItem="88k-w3-zhB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cDe-qG-nQR"/>
+                            <constraint firstItem="GMU-Hj-j3v" firstAttribute="centerY" secondItem="4XP-jj-t0Y" secondAttribute="centerY" id="cHL-Je-czS"/>
+                            <constraint firstItem="dOt-tG-ecl" firstAttribute="top" secondItem="FGp-RI-ofy" secondAttribute="bottom" constant="8" id="dJV-hR-yMf"/>
+                            <constraint firstItem="dOt-tG-ecl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sRE-PO-4Pl"/>
+                            <constraint firstItem="FGp-RI-ofy" firstAttribute="top" secondItem="88k-w3-zhB" secondAttribute="bottom" constant="30" id="tZf-7z-Zli"/>
+                            <constraint firstItem="JbX-wo-vau" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="u60-1x-eFk"/>
+                            <constraint firstItem="4XP-jj-t0Y" firstAttribute="top" secondItem="dOt-tG-ecl" secondAttribute="bottom" constant="8" id="ylF-SO-G9f"/>
+                            <constraint firstItem="88k-w3-zhB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zQr-sS-ORd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLbl" destination="FGp-RI-ofy" id="a5J-sW-RN9"/>
+                        <outlet property="conditionLbl" destination="dOt-tG-ecl" id="Apv-4U-PrK"/>
+                        <outlet property="degreeLbl" destination="4XP-jj-t0Y" id="OTP-gU-yVJ"/>
+                        <outlet property="imgView" destination="GMU-Hj-j3v" id="hga-aY-p3D"/>
+                        <outlet property="searchBar" destination="88k-w3-zhB" id="MvK-3m-ZJi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135" y="124.64788732394366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Milky-Way" width="650" height="975"/>
+    </resources>
 </document>
