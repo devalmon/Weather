@@ -12,7 +12,6 @@
 		8A3CEF591ED80CCB009B26CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3CEF571ED80CCB009B26CF /* Main.storyboard */; };
 		8A3CEF5B1ED80CCB009B26CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3CEF5A1ED80CCB009B26CF /* Assets.xcassets */; };
 		8A3CEF5E1ED80CCB009B26CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3CEF5C1ED80CCB009B26CF /* LaunchScreen.storyboard */; };
-		8A7606A21EE13FEE001B0683 /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7606A11EE13FEE001B0683 /* WeatherGetter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +22,6 @@
 		8A3CEF5A1ED80CCB009B26CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A3CEF5D1ED80CCB009B26CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A3CEF5F1ED80CCB009B26CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A7606A11EE13FEE001B0683 /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
-		8A88F1121F136AB400CD0ECC /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +54,12 @@
 		8A3CEF521ED80CCB009B26CF /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				8A7606A11EE13FEE001B0683 /* WeatherGetter.swift */,
 				8A3CEF531ED80CCB009B26CF /* AppDelegate.swift */,
 				8A3CEF551ED80CCB009B26CF /* ViewController.swift */,
 				8A3CEF571ED80CCB009B26CF /* Main.storyboard */,
 				8A3CEF5A1ED80CCB009B26CF /* Assets.xcassets */,
 				8A3CEF5C1ED80CCB009B26CF /* LaunchScreen.storyboard */,
 				8A3CEF5F1ED80CCB009B26CF /* Info.plist */,
-				8A88F1121F136AB400CD0ECC /* MyPlayground.playground */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -143,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A3CEF561ED80CCB009B26CF /* ViewController.swift in Sources */,
-				8A7606A21EE13FEE001B0683 /* WeatherGetter.swift in Sources */,
 				8A3CEF541ED80CCB009B26CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
