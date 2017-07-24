@@ -34,7 +34,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         private init() {}
         
         static let baseURL = "https://api.darksky.net/forecast/"
-        static let token = "2f5cb9a96145515ba3b8f6ceaef13fff/"
+        static let token = "YOUR_KEY/"
     }
     
     
