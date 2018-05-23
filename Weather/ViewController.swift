@@ -34,7 +34,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         private init() {}
         
         static let baseURL = "https://api.darksky.net/forecast/"
-        static let token = "YOUR_KEY/"
+        static let token = "2f5cb9a96145515ba3b8f6ceaef13fff/"
     }
     
     
@@ -91,22 +91,22 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 if error != nil { return }
                 
                 do {
-                    //                        print("Going to parse data")
+                                            print("Going to parse data")
                     let json = try JSONSerialization.jsonObject(with: data!,
                                                                 options: .mutableContainers) as! [String : AnyObject]
                     
                     if let currently = json["currently"] as? [String : AnyObject] {
                         if let temp = currently["temperature"] as? Int {
                             self?.degree = (temp - 32)*5/9
-                            //                                print("temp OK")
+                                                            print("temp OK")
                         }
                         if let condition = currently["summary"] as? String {
                             self?.condition = condition
-                            //                                print("condition OK")
+                                                            print("condition OK")
                         }
                         if let city = json["timezone"] as? String {
                             self?.city = city
-                            //                                print("Timezone OK")
+                                                            print("Timezone OK")
                         }
                         if let _ = json["error"] {
                             self?.isExist = false
@@ -118,15 +118,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
                         }
                         
                         DispatchQueue.main.async {
-                            //                                print("Trying to update UI")
-                            //                                print("\(self?.city ?? "default value for city")")
+                                                            print("Trying to update UI")
+                                                            print("\(self?.city ?? "default value for city")")
                             if (self?.isExist)! {
                                 
-                                self?.degreeLbl.text = "\(self?.degree.description ?? "")°"
+//                                self?.degreeLbl.text = ("\(self?.degree.description ?? "°")")
                                 self?.conditionLbl.text = self?.condition
                                 self?.cityLbl.text = self?.city
                                 self?.summaryLbl.text = self?.summary
-                                //                                    self?.imgView.downloadImage(from: (self?.imgURL)!)
+//                                                                    self?.imgView.downloadImage(from: (self?.imgURL)!)
                                 self?.degreeLbl.isHidden = false
                                 self?.conditionLbl.isHidden = false
                                 self?.cityLbl.isHidden = false
