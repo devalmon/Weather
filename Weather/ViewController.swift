@@ -122,11 +122,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
                                                             print("\(self?.city ?? "default value for city")")
                             if (self?.isExist)! {
                                 
-//                                self?.degreeLbl.text = ("\(self?.degree.description ?? "°")")
+                                self?.degreeLbl.text = ("\(self?.degree.description ?? "°")")
                                 self?.conditionLbl.text = self?.condition
                                 self?.cityLbl.text = self?.city
                                 self?.summaryLbl.text = self?.summary
-//                                                                    self?.imgView.downloadImage(from: (self?.imgURL)!)
+                                                                    self?.imgView.downloadImage(from: (self?.imgURL)!)
                                 self?.degreeLbl.isHidden = false
                                 self?.conditionLbl.isHidden = false
                                 self?.cityLbl.isHidden = false
